@@ -42,14 +42,18 @@ console.log("%cHello world!", "color: blue; font-size: xx-large");
 
 // console.trace – outputs the current stack trace or displays the same output as the log method if invoked in
 // the global scope.
-function sec() {
-  first();
-}
+// function sec() {
+//   first();
+// }
 
 function first() {
   console.trace();
 }
 
-sec();
+var e = new Error("foo");
+console.log(e.stack);
 
-// day 22
+// sec();
+
+// It is used to add a timestamp to the browser's Timeline or Waterfall feature for debugging and profiling purposes.
+console.timeStamp("display the current time with custom string");
