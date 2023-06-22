@@ -18,6 +18,8 @@ console.log(Number.NEGATIVE_INFINITY);
 console.log("b" * 3); //nan
 console.log("cccb" - "b"); //nan
 
+// CONSOLE METHODS
+
 // console.time can be used to measure how long a task in your code takes to run
 console.time("start");
 
@@ -57,3 +59,44 @@ console.log(e.stack);
 
 // It is used to add a timestamp to the browser's Timeline or Waterfall feature for debugging and profiling purposes.
 console.timeStamp("display the current time with custom string");
+
+// console.table() can be used to display objects and arrays in a tabular format.
+//  you can pass an optional second parameter which is an array of strings representing the column names or properties of the objects to be displayed in the table.
+
+console.table(["ahsan", "zahoor"]);
+console.table({ foo: "bar", bar: "baz" });
+
+var personArr = [
+  {
+    personId: 123,
+    name: "Jhon",
+    city: "Melbourne",
+    phoneNo: "1234567890",
+  },
+  {
+    personId: 124,
+    name: "Amelia",
+    city: "Sydney",
+    phoneNo: "1234567890",
+  },
+  {
+    personId: 125,
+    name: "Emily",
+    city: "Perth",
+    phoneNo: "1234567890",
+  },
+  {
+    personId: 126,
+    name: "Abraham",
+    city: "Perth",
+    phoneNo: "1234567890",
+  },
+];
+
+console.table(personArr, ["name", "personId"]);
+
+var arrayTemp = [["ahsan", "zahoor"], ["check"]];
+console.table(arrayTemp);
+
+// removes all previously printed messages in the console
+console.clear();
