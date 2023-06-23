@@ -35,3 +35,35 @@ var date2 = new Date(date1.valueOf() + 5000);
 var dateDiff = date1.valueOf() - date2.valueOf();
 var dateDiffInYears = dateDiff / 1000 / 60 / 60 / 24 / 365; //convert milliseconds into years
 console.log("Date difference in years : " + dateDiffInYears);
+
+// Comparison Operations
+// The abstract equality and inequality operators ( == and != ) convert their operands if the operand types do not match.
+// Operands of the abstract equality operator are compared after being converted to a common type.
+console.log("" == 0);
+console.log(false == 0);
+console.log(false == "0");
+// JavaScript converts empty strings to numbers.
+Number(""); // 0
+Number("0"); // 0
+Number(false); // 0
+
+// Any equality or relational comparisons with NaN returns false , even comparing it with itself. Because, NaN is
+// supposed to denote the result of a nonsensical computation, and as such, it isn’t equal to the result of any other
+// nonsensical computations.
+
+console.log(NaN === NaN); //false
+
+// Logical OR ( || ), reading left to right, will evaluate to the ﬁrst truthy value. If no truthy value is found, the last value is returned.
+var t = "" || undefined;
+console.log("t", t);
+
+// Logical AND ( && ), reading left to right, will evaluate to the ﬁrst falsy value. If no falsey value is found, the last value is returned.
+// var c = "" && "asd";
+var c = "" && "asd";
+console.log("c", c);
+
+// Object.is It returns true if both operands belong to the same Type and are the same value.
+var t1 = 1,
+  t2 = 1;
+console.log(Object.is(t1, t2));
+console.log(Object.is({}, {}));
